@@ -25,10 +25,10 @@ extern struct ieee80211_ops ssv6200_ops;
 
 // Hack: redefine MAX_AMPDU_BUF because buf_size here is a 8-bit char
 // and mainline kernel value is 0x100, which overflows
-#ifdef IEEE80211_MAX_AMPDU_BUF
-#undef IEEE80211_MAX_AMPDU_BUF
+//#ifdef IEEE80211_MAX_AMPDU_BUF
+//#undef IEEE80211_MAX_AMPDU_BUF
 #define IEEE80211_MAX_AMPDU_BUF 0x40
-#endif
+//#endif
 
 #define BA_WAIT_TIMEOUT (800)
 #define AMPDU_BA_FRAME_LEN (68)
